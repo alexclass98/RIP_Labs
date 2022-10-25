@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Заказ №{{ data.id }}{% endblock %}
+
+{% block content %}
+    <div>Информация о заказе №{{ data.id }}</div>
+         {% if data.id == 1 %}
+             <br/>
+            <div>{{ data.options.0 }}</div>
+             <div>Дата прихода заказа:30.09.2022</div>
+             <img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614532663_9-p-kniga-na-belom-fone-13.jpg" height="200px" width="auto" />
+        {% elif data.id == 2 %}
+             <br/>
+            <div>{{ data.options.1 }}</div>
+             <div>Дата прихода заказа:03.10.2022</div>
+             <img src="https://4tololo.ru/sites/default/files/images/20181403120035.jpeg" height="200px" width="auto" />
+         {% elif data.id == 3 %}
+             <br/>
+            <div>{{ data.options.2 }}</div>
+             <div>Дата прихода заказа:11.12.2022</div>
+             <img src="https://tehnoteca.ru/img/1326/1325171/razer_sphex_v2_mini_4.jpg" height="200px" width="auto" />
+        {% else %}
+             <br/>
+            <div>Нет данных</div>
+        {% endif %}
+{% endblock %}
